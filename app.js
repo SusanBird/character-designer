@@ -8,6 +8,9 @@ const bottomEl = document.getElementById('bottom');
 const reportEl = document.getElementById('report');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
+const nameInput = document.getElementById('name-input');
+const nameEl = document.getElementById('my-name-is');
+//const nameButton = document.getElementById('name-button');
 
 // set state for how many times the user changes the head, middle, and bottom
 let headCount = 0;
@@ -16,6 +19,7 @@ let bottomCount = 0;
 
 // set state for all of the character's catchphrases
 let catchPhrases = [];
+//let nameArray = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -102,3 +106,46 @@ function displayCatchphrases() {
         catchphraseInput.append(div);
     }
 }
+
+    // - user types into the character name input
+nameInput.addEventListener('input', () => {
+        //   - update the welcome element with the current city name the user has typed
+    nameEl.textContent = nameInput.value;
+});
+
+
+// nameButton.addEventListener('click', () => {
+//         // get the value of the name input
+//     const chosenName = nameInput.value;
+    
+//         // push the new name to the name array in state
+//     nameArray.push(chosenName);
+    
+//         // clear out the form input's value so it's empty to the user
+//     nameInput.value = ' ';
+       
+//         // update the dom to show the new name (refactor to/call displayName to do this work)
+//     displayName();
+// });
+
+// function displayName() {
+//         // clear out the DOM for the currently displayed name
+//     const nameInput = document.getElementById('character-name');
+    
+//     nameInput.textContent = ' ';
+    
+//         // loop through each name in state
+    
+//     for (let name of nameArray) {
+//         const div = document.createElement('div');
+    
+//         // and for each name
+//         // create an HTML element with the name as its text content
+    
+//         div.classList.add('character-name');
+//         div.textContent = name;
+    
+//             // and append that HTML element to the cleared-out DOM
+//         nameInput.append(div);
+//     }
+// }
