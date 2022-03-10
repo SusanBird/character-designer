@@ -102,10 +102,4 @@ function displayCatchphrases() {
         // and append that HTML element to the cleared-out DOM
         catchphraseInput.append(div);
     }
-
-    
-    
-    
-    
-    
 }
