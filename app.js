@@ -22,9 +22,9 @@ let catchPhrases = [];
 //let nameArray = [];
 
  // - user types into the character name input
- nameInput.addEventListener('input', () => {
+nameInput.addEventListener('input', () => {
     //   - update the welcome element with the current city name the user has typed
-nameEl.textContent = nameInput.value;
+    nameEl.textContent = nameInput.value;
 });
 
 headDropdown.addEventListener('change', () => {
