@@ -21,6 +21,12 @@ let bottomCount = 0;
 let catchPhrases = [];
 //let nameArray = [];
 
+ // - user types into the character name input
+ nameInput.addEventListener('input', () => {
+    //   - update the welcome element with the current city name the user has typed
+nameEl.textContent = nameInput.value;
+});
+
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
     let chosenHead = headDropdown.value;  
@@ -107,11 +113,7 @@ function displayCatchphrases() {
     }
 }
 
-    // - user types into the character name input
-nameInput.addEventListener('input', () => {
-        //   - update the welcome element with the current city name the user has typed
-    nameEl.textContent = nameInput.value;
-});
+   
 
 
 // nameButton.addEventListener('click', () => {
